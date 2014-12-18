@@ -1,4 +1,5 @@
 #! /usr/bin/env python                                                           
+from __future__ import print_function
 import IMP
 import IMP.atom
 import IMP.core
@@ -31,10 +32,10 @@ if len(args) != 0:
 
 # check stuff
 if(len(result.pdbs)!=len(result.names)):
-  print "one name per pdb file is needed"
+  print("one name per pdb file is needed")
   exit()
 if(len(result.pdbs)!=len(result.GMMdatafiles)):                                     
-  print "one GMM data file per protein is needed"                                        
+  print("one GMM data file per protein is needed")                                        
   exit()
 
 # parameters
