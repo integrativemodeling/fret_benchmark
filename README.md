@@ -1,7 +1,7 @@
 # FRET Benchmark
 
-This directory contains all the scripts to run the benchmark of the FRETR
-Bayesian restraint, and the reference results.  
+This directory contains all the scripts to run the benchmark of the
+FRET<sub>R</sub> Bayesian restraint, and the reference results.  
 
 ## Folder structure 
 
@@ -69,4 +69,4 @@ _Testable_: Yes.
 _Parallelizeable_: Yes
 
 _Publications_:
- - Bonomi et al. "Protein complex structures from Bayesian modeling of in vivo FRET data", Submitted 2013. 
+ - M. Bonomi, E.G. Muller, R. Pellarin, S.J. Kim, D. Russel, R. Ramsden, B.A. Sundin, T.A. Davis, A. Sali. Determining protein complex structures based on a Bayesian model of in vivo FRET data. Mol Cell Proteomics 13, 2812-2823, 2014.
