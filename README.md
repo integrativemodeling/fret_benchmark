@@ -46,7 +46,7 @@ FRET<sub>R</sub> Bayesian restraint, and the reference results.
    - `DATA/SCRIPTS/ANALYSIS/do_analysis_per_complex.py RESULTS_NOLINKER  nolinker_per_complex.dat`
 
    Statistics will be written to the `.dat` files, which should be compared to the results in `DATA/REFERENCE_RESULTS` and to those
-   published in Bonomi et al. "Protein complex structures from Bayesian modeling of in vivo FRET data", as follows.
+   published in Bonomi et al. "Determining protein complex structures based on a Bayesian model of in vivo FRET data", as follows.
    - `linker.dat`             -> Table S2
    - `nolinker.dat`           -> Table S3
 
