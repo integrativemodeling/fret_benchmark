@@ -1,5 +1,3 @@
-# FRET Benchmark
-
 This directory contains all the scripts to run the benchmark of the
 FRET<sub>R</sub> Bayesian restraint, and the reference results.  
 
