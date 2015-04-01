@@ -1,3 +1,6 @@
 title: FRET Benchmark
 tags: [FRET, benchmark]
 pmid: 25139910
+test:
+    runtime: 48h
+    build: fast
