@@ -430,7 +430,7 @@ for istep in range(0,NITER_):
         output["Total_Score"]=score
         output["Step_Number"]=istep                                              
         output["Temperature"]=mc.get_kt()                                        
-        output["Acceptance"]=mc.get_number_of_forward_steps()/float(NOPT_)       
+        output["Acceptance"]=mc.get_number_of_accepted_steps()/float(NOPT_)
         for key in rst_dict: 
            output[key]=rst_dict[key].evaluate(False)                        
         output["Ida"]=Ida.get_scale()
