@@ -403,9 +403,8 @@ if not NORANDOM_:
 # set barrier centered on the position of the biggest rigid body
 rst_dict["External_barrier"]=get_external_barrier(rb_list,BOX_,rb_list[id_fix].get_coordinates(),10.)
 
-# add restraints
-for rst in rst_dict:
-    m.add_restraint(rst_dict[rst])
+# make scoring function
+sf = IMP.core.RestraintsScoringFunction(rst_dict.values())
 
 # Movers
 mvs=[]                                                                           
@@ -418,7 +417,9 @@ mvs+=get_rb_movers(rb_list,MAXTRANS_,MAXROT_,id_fix)
 smv=IMP.core.SerialMover(mvs)
 
 # setting up MonteCarlo                                                          
-mc=IMP.core.MonteCarlo(m)                                                        
+mc=IMP.core.MonteCarlo(m)
+mc.set_scoring_function(sf)
+
 mc.set_return_best(False)                                                        
 mc.set_kt(1.0)                                                                   
 mc.add_mover(smv)
@@ -443,7 +444,7 @@ for istep in range(0,NITER_):
     mc.optimize(NOPT_)
 
     # get score 
-    score = m.evaluate(False)
+    score = sf.evaluate(False)
 
     # printout stats only for best posterior model (save space)
     # this can be easily changed
