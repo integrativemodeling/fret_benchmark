@@ -379,7 +379,7 @@ if not NORANDOM_:
 rst_dict["External_barrier"]=get_external_barrier(rb_list,BOX_,rb_list[id_fix].get_coordinates(),10.)
 
 # make scoring function
-sf = IMP.core.RestraintsScoringFunction(rst_dict.values())
+sf = IMP.core.RestraintsScoringFunction(list(rst_dict.values()))
 
 # Movers
 mvs=[]                                                                           
