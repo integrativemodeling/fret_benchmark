@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
+from __future__ import print_function, division
 import IMP
 import IMP.atom
 import IMP.core
@@ -259,7 +259,7 @@ for key in molecules:
     placement_atoms[key]=[]
     placement_ref_atoms[key]=[]
     # collect 10 atoms for global DRMS
-    for i in range(0,len(prot_atoms),len(prot_atoms)/10): 
+    for i in range(0,len(prot_atoms),len(prot_atoms)//10):
         drms_atoms.append(prot_atoms[i])
         ref_drms_atoms.append(ref_prot_atoms[i])
         # and also for placement scores
