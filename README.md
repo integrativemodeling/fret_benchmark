@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.46558.svg)](http://dx.doi.org/10.5281/zenodo.46558)
+
 This directory contains all the scripts to run the benchmark of the
 FRET<sub>R</sub> Bayesian restraint, and the reference results.  
 
