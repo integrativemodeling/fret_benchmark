@@ -55,11 +55,11 @@ class Tests(unittest.TestCase):
                                 ref_data[key].stddev, 6)
 
     def assertNearMean(self, key, mean, ref_mean, ref_stddev, mult):
-        self.assert_(abs(mean - ref_mean) < ref_stddev * mult,
-                     "Predicted mean for %s (%.2f) is not within %d "
-                     "standard deviations (%d * %.2f) of the expected "
-                     "mean (%.2f)" % (key, mean, mult, mult,
-                                      ref_stddev, ref_mean))
+        self.assertTrue(abs(mean - ref_mean) < ref_stddev * mult,
+                        "Predicted mean for %s (%.2f) is not within %d "
+                        "standard deviations (%d * %.2f) of the expected "
+                        "mean (%.2f)" % (key, mean, mult, mult,
+                                         ref_stddev, ref_mean))
 
 if __name__ == '__main__':
     # Always run from top-level directory
