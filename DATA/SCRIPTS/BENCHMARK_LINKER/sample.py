@@ -86,7 +86,7 @@ def get_atoms(prot):
     return atoms
 
 def get_excluded_volume(atoms,kappa):
-    lsc=IMP.container.ListSingletonContainer(atoms)
+    lsc=IMP.container.ListSingletonContainer(m, atoms)
     evr=IMP.core.ExcludedVolumeRestraint(lsc,kappa)
     return evr 
 
@@ -160,7 +160,7 @@ def get_external_barrier(rblist,bbl,c,kappa):
     hbbl = bbl / 2.0
     ub= IMP.core.HarmonicUpperBound(hbbl, kappa)
     ss= IMP.core.DistanceToSingletonScore(ub, c)
-    lsc= IMP.container.ListSingletonContainer(rblist)
+    lsc= IMP.container.ListSingletonContainer(m, rblist)
     rst= IMP.container.SingletonsRestraint(ss, lsc)
     return rst
  
