@@ -136,7 +136,7 @@ def get_rb_movers(rblist,tmax,rmax,id_fix):
     mvs=[]
     for i,rb in enumerate(rblist):
         if (FIXONERIGIDBODY_ and i==id_fix): continue
-        mv= IMP.core.RigidBodyMover(rb, tmax, rmax)
+        mv= IMP.core.RigidBodyMover(m, rb, tmax, rmax)
         mvs.append(mv)
     return mvs
 
